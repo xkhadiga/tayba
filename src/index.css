@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+button {
+  cursor: pointer;
+}
+/* Navbar */
+nav {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(255, 255, 255);
+   color: #23292c;
+
+}
+.nav-links button:hover,
+.nav-links button:active {
+  color: #ea462b;
+  transition: color 0.1s ease;
+}
+.nav-links .active {
+  color: #ea462b;
+}
+.logo {
+  font-family: "Playwrite NO", cursive;
+}
+.nav-btn {
+  border: 1px solid #ea462b;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.nav-btn:hover {
+  background-color: #ea462b;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+
+/* Home Page */
+.homepage {
+ color: #23292c;
+}
+.main-btn {
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 150px;
+}
+.p-text{
+  color:rgb(107, 106, 106);
+}
