@@ -72,7 +72,7 @@ function TestimonialsSection() {
   return (
     <section >
       <div className="max-w-6xl mx-auto px-5">
-              <h1 className="text-5xl font-semibold text-center mb-2">Our Reviews</h1>
+              <h1 className="text-5xl text-(--text-color) font-semibold text-center mb-2">Our Reviews</h1>
         <p className="p-text mb-10 text-center">They Say About Us
 </p>
         <div className="relative">

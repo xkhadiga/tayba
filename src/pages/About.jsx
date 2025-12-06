@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import AboutImg from "../assets/about/ab1.png";
 import AboutImg2 from "../assets/about/ab2.png";
 import ChefImg from "../assets/about/chef1.jpg";
+import TeamImg from "../assets/about/team1.jpg";
+import TeamImg2 from "../assets/about/team2.jpg";
+import TeamImg3 from "../assets/about/team3.jpg";
 import SignatureImg from "../assets/about/signature.png";
 import PageBanner from "../components/common/PageBanner";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+
+import { FaFacebookF, FaTwitter, FaInstagram,  } from "react-icons/fa";
+import TestimonialsSection from "../components/home_components/TestimonialsSection";
 
 function About() {
   const [title, setTitle] = useState("About Us");
@@ -30,7 +36,7 @@ function About() {
       ],
     },
   ];
-        const aboutUsData = [
+  const aboutUsData = [
     {
       number: "60+",
       title: "Tasty Dishes",
@@ -50,16 +56,34 @@ function About() {
     {
       number: "300+",
       title: "Best Recipes",
-    }
+    },
+  ];
+  const chefsData = [
+    {
+      name: "John Doe",
+      role: "Chef",
+      img: TeamImg,
+    },
+    {
+      name: "Jozefo Teodora",
+      role: "Chef",
+      img: TeamImg2,
+    },
+    {
+      name: "Raya Leach",
+      role: "Chef",
+      img: TeamImg3,
+    },
   ];
   return (
     <div>
       <PageBanner title={title} text={text} />
-      <div>
+      {/* ABOUT US */}
+      <div className=" mt-64">
         {aboutData.map((item, index) => (
           <div
             key={index}
-            className={`flex w-full my-16 items-center justify-center gap-18 ${
+            className={`flex w-full mb-16 items-center justify-center gap-18 ${
               index % 2 === 0 ? "flex-row-reverse" : ""
             }`}
           >
@@ -89,17 +113,50 @@ function About() {
           </div>
         ))}
       </div>
+      {/* Our numbers */}
       <section>
-        <div className="flex my-32 gap-16 items-center justify-center text-center">
+        <div className="flex my-64 gap-16 items-center justify-center text-center">
           {aboutUsData.map((item, index) => {
             return (
-              <div key={index} className="flex flex-col gap-2 " >
-                <h1 className=" text-5xl font-semibold text-(--text-color)">{item.number}</h1>
+              <div key={index} className="flex flex-col gap-2 ">
+                <h1 className=" text-5xl font-semibold text-(--text-color)">
+                  {item.number}
+                </h1>
                 <p className="p-text text-lg">{item.title}</p>
               </div>
             );
           })}
         </div>
+      </section>
+      {/* Chefs */}
+      <section className="text-center mb-64 ">
+              <h1 className="text-5xl font-semibold text-(--text-color) mb-2">Meet Our Chefs</h1>
+          <p className="text-lg p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <div className="flex mt-16 gap-16 items-center justify-center text-center">
+    
+          {chefsData.map((item, index) => {
+            return (
+              <div key={index} className="flex flex-col  ">
+                <LazyLoadImage src={item.img} />
+                <h1 className=" text-3xl font-semibold text-(--text-color) mt-5">
+                  {item.name}
+                </h1>
+                <p className="p-text text-lg">{item.role}</p>
+                <div className="border-t border-[#dadada] mt-6">
+                           <ul className="flex items-center justify-center gap-4 p-3 text-xl p-text">
+                                <li><a href="#" ><FaFacebookF /></a></li>
+                                <li><a href="#" ><FaTwitter /></a></li>
+                                <li><a href="#" ><FaInstagram /></a></li>
+                              </ul>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      {/* Our Reviews */}
+      <section className="mt-32 mb-64">
+        <TestimonialsSection />
       </section>
     </div>
   );

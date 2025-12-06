@@ -56,17 +56,17 @@ function Footer() {
 
             <p className="flex items-center gap-2 mb-2 p-text">
               <FaMapMarkerAlt className="text-yellow-500" />
-              Avenue Marina 34568 NY (U.S)
+              Alexandria, Egypt 
             </p>
 
             <p className="flex items-center gap-2 mb-2 p-text">
               <FaPhone className="text-yellow-500" />
-              +0987 193-34-76
+              +01 234 56789
             </p>
 
             <p className="flex items-center gap-2 mb-2 p-text">
               <FaEnvelope className="text-yellow-500" />
-              statumsupport@mail.com
+              khadiga.alaa0@gmail.com
             </p>
           </div>
 
