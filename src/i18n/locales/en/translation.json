@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "contact": "Contact",
+    "book": "Book a Table"
+  },
+  "carousel": {
+    "slide1": {
+      "h1": "Fresh & Fast",
+      "h2": "Street Food",
+      "p": "High Professional Services"
+    },
+    "slide2": {
+      "h1": "Food For",
+      "h2": "Your Soul",
+      "p": "It’s about good food and fresh ingredients."
+    },
+    "slide3": {
+      "h1": "Try Our New",
+      "h2": "Burger Menu",
+      "p": "You will love it"
+    },
+    "button": "View Menu"
+  }
+}

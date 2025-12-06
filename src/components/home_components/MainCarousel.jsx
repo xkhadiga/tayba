@@ -4,35 +4,35 @@ import foodImage3 from "../../assets/food3.jpg";
 import { ChevronLeft, ChevronRight } from "../../assets/icons";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-
+import { useTranslation } from "react-i18next";
 
 function MainCarousel() {
-      const carousel_data = [
+    const { t, i18n } = useTranslation();
+
+  const carousel_data = [
     {
       img: foodImage,
-      h1: "Fresh & Fast",
-      h2:
-        "Street Food",
-      p: "High Professional Services",
+      h1: t("carousel.slide1.h1"),
+      h2: t("carousel.slide1.h2"),
+      p: t("carousel.slide1.p"),
     },
     {
       img: foodImage2,
-      h1: "Food For",
-      h2:
-        "Your Soul",
-      p: "It’s about good food and fresh ingredients.",
+      h1: t("carousel.slide2.h1"),
+      h2: t("carousel.slide2.h2"),
+      p: t("carousel.slide2.p"),
     },
     {
       img: foodImage3,
-      h1: "Try Our New",
-      h2: "Burger Menu",
-      p: " You will love it",
+      h1: t("carousel.slide3.h1"),
+      h2: t("carousel.slide3.h2"),
+      p: t("carousel.slide3.p"),
     },
-
-
   ];
   return (
+    <div dir="ltr">
      <Carousel
+     
       renderArrowPrev={(onClickHandler, hasPrev) =>
         hasPrev && (
           <button
@@ -88,6 +88,7 @@ function MainCarousel() {
 
        
       </Carousel>
+      </div>
   )
 }
 

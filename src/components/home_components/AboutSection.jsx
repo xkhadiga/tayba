@@ -3,6 +3,9 @@ import icon1 from "../../assets/icons/icon1.png";
 import icon2 from "../../assets/icons/icon2.png";
 import icon3 from "../../assets/icons/icon3.png";
 import icon4 from "../../assets/icons/icon4.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function AboutSection() {
       const sec2_data = [
     {
@@ -53,10 +56,10 @@ function AboutSection() {
       <section className="w-full flex items-center justify-center ">
         {/* left */}
         <div className="w-1/2 ">
-          <img src={section2} alt="" />
+          <LazyLoadImage effect="blur" src={section2} alt="" />
         </div>
         {/* right */}
-        <div className="w-1/2">
+        <div className="w-1/2 text-(--text-color)">
           <h1 className="text-5xl font-semibold ">
             All in Good Taste Food With
             <span className="text-[#ea462b]"> Tayba Foods</span>

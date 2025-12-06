@@ -6,9 +6,21 @@
   scroll-behavior: smooth;
   transition: all 0.3s ease;
 }
+:root {
+  --primary-color: #ea462b;
+  --secondary-color: #f8d5d0;
+  --text-color: #23292c;
+}
 button {
   cursor: pointer;
 }
+.border-light{
+  border: 1px solid #f8d5d0;
+}
+.main-bg{
+  background-color: #ea462b;
+}
+
 /* Navbar */
 nav {
   font-size: 18px;
@@ -16,6 +28,11 @@ nav {
   background-color: rgb(255, 255, 255);
    color: #23292c;
 
+}
+
+.border-light:hover{
+  border: 1px solid #ea462b;
+  transition: all 0.2s ease;
 }
 .nav-links button:hover,
 .nav-links button:active {
@@ -57,4 +74,8 @@ nav {
 }
 .p-text{
   color:rgb(107, 106, 106);
+}
+footer{
+  background-color: #252428;
+  color: white;
 }

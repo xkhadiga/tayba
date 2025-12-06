@@ -10,6 +10,9 @@ import gallery2 from "../../assets/gallery2.jpg"
 import gallery3 from "../../assets/gallery3.jpg"
 import gallery4 from "../../assets/gallery4.jpg"
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function PopularDishes() {
       const [sliderRef] = useKeenSlider({
           mode: "free-snap",
@@ -87,11 +90,12 @@ const gallery = [
         <p className="p-text">Try the delicious new dishes from our chefs.
 </p>
               <div ref={sliderRef}
+              dir="ltr"
               
               className="keen-slider my-6 flex px-16 ">
         {products.map((product) => (
-          <div key={product.id} className="keen-slider__slide flex flex-col items-center border border-[#f8d5d0] hover:border-[#ea462b] hover:cursor-pointer rounded-2xl p-3 gap-1 ">
-            <img src={product.img} alt={product.title} className="rounded-2xl" />
+          <div key={product.id} className="keen-slider__slide flex flex-col items-center border border-light hover:cursor-pointer rounded-2xl p-3 gap-1 ">
+            <LazyLoadImage src={product.img} alt={product.title} effect="blur" className="rounded-2xl" />
             <h3 className="text-2xl">{product.title}</h3>
             <p className="p-text">{product.description}</p>
             <p className="text-2xl text-[#ea462b]"> ${product.price}</p>
@@ -102,10 +106,10 @@ const gallery = [
     
     </div>
          {/* Gallery */}
-         <div className="flex w-full mt-20 mb-10">
+         <div className="flex w-full mt-20 mb-10 overflow-hidden">
         {gallery.map((product) => (
-          <div key={product.id} className="keen-slider__slide ">
-            <img src={product.img} alt={product.title}  />
+          <div key={product.id} className="keen-slider__slide hover:scale-105 hover:cursor-pointer  ">
+            <LazyLoadImage effect="blur" src={product.img} alt={product.title}  />
           </div>
         ))}
          </div>

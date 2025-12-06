@@ -1,24 +1,39 @@
 import Nav from "./components/layout/Nav";
 import HomePage from "./pages/HomePage";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Footer from "./components/layout/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-import About from './pages/About'
-import Menu from './pages/Menu'
-import Contact from './pages/Contact'
+import React, { Suspense, lazy } from "react";
+const About = lazy(() => import("./pages/About"));
+const Menu = lazy(() => import("./pages/Menu"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 
 const App = () => {
-	return (
-		 <Router>
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "dir",
+      i18n.language === "ar" ? "rtl" : "ltr"
+    );
+  }, [i18n.language]);
+  return (
+    <Router>
       <Nav />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
+      <Footer />
     </Router>
-	);
+  );
 };
 
 export default App;

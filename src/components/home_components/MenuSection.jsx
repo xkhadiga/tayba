@@ -25,6 +25,9 @@ import c3item1 from "../../assets/menuitems/ct3i1.jpg";
 import c3item2 from "../../assets/menuitems/ct3i2.jpg";
 import c3item3 from "../../assets/menuitems/ct3i3.jpg";
 import c3item4 from "../../assets/menuitems/ct3i4.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 
 function MenuSection() {
   const menuData = [
@@ -136,7 +139,10 @@ function MenuSection() {
   ];
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col  ">
+              <h1 className="text-5xl font-semibold text-center mb-2">Our Menu</h1>
+        <p className="p-text mb-10 text-center">Try the delicious new dishes from our chefs.
+</p>
       {menuData.map((category, index) => (
         <section
           className={`flex  mb-12 w-full items-center gap-32 justify-center ${
@@ -149,7 +155,8 @@ function MenuSection() {
         >
           {/* Left large image */}
           <div >
-            <img
+            <LazyLoadImage
+              effect="blur"
               src={category.categoryImg}
               alt={category.category}
               className="w-full h-full object-cover rounded-2xl"
@@ -165,7 +172,8 @@ function MenuSection() {
                 <li key={item.id} className="flex gap-4 items-center ">
                   {/* Small item image */}
                   <div className="w-18 h-18 flex-shrink-0">
-                    <img
+                    <LazyLoadImage
+                      effect="blur"
                       src={item.img}
                       alt={item.title}
                       className="w-full h-full object-cover rounded-lg"
