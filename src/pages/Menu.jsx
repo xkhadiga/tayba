@@ -167,9 +167,9 @@ const mainMenuData = [
 ];
 
   return (
-    <div>
+    <div className='overflow-x-hidden w-full max-w-full flex flex-col items-center '>
       <PageBanner title="Our Menu" text="good food fresh ingredients" />
-      <section className="w-full mt-20 py-16 bg-white">
+      <section className="w-full max-w-7xl mt-20 py-16 bg-white border border-(--secondary-color) p-10 rounded-2xl">
       {mainMenuData.map((menu, i) => (
         <div key={i} className="mb-40">
           {/* Title */}

@@ -9,6 +9,7 @@ import React, { Suspense, lazy } from "react";
 const About = lazy(() => import("./pages/About"));
 const Menu = lazy(() => import("./pages/Menu"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Booking = lazy(() => import("./pages/Booking"));
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
         </Routes>
       </Suspense>
       <Footer />
