@@ -37,7 +37,7 @@ function MainCarousel() {
         hasPrev && (
           <button
             onClick={onClickHandler}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30  p-3 rounded-full z-10"
+            className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 bg-black/30  p-3 rounded-full z-10"
           >
             <ChevronLeft  stroke="white" fill="white" width={16} />
           </button>
@@ -47,7 +47,7 @@ function MainCarousel() {
         hasNext && (
           <button
             onClick={onClickHandler}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30  p-3 rounded-full z-10"
+            className=" hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 bg-black/30  p-3 rounded-full z-10"
           >
             <ChevronRight  stroke="white" fill="white" width={16} />
           </button>
@@ -66,20 +66,19 @@ function MainCarousel() {
       >
         {carousel_data.map((item, index) => (
           <div
-            className=" relative w-full h-[87vh]"
+            className=" relative w-full h-[87dvh] bg-right md:bg-center"
             style={{
               backgroundImage: `url(${item.img})`,
               backgroundSize: "cover",
-              backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="flex flex-col justify-center h-full  text-left pl-32">
-              <h1 className="text-7xl">{item.h1}</h1>
-              <h1 className="text-7xl">{item.h2}</h1>
-              <p className="text-2xl my-3">{item.p}</p>
+            <div className="flex flex-col justify-center h-full  text-left pl-2 md:pl-32 text-white md:text-(--text-color) ">
+              <h1 className="text-4xl md:text-7xl font-medium font md:font-base text-shadow-gray-700 text-shadow-sm md:text-shadow-none">{item.h1}</h1>
+              <h1 className="text-4xl md:text-7xl font-medium md:font-base text-shadow-gray-700 text-shadow-sm md:text-shadow-none">{item.h2}</h1>
+              <p className="text-xl md:text-2xl my-6 md:my-3 font-medium md:font-base text-shadow-gray-700 text-shadow-sm md:text-shadow-none " >{item.p}</p>
 
-              <button className="main-btn bg-[#ea462b]  w-[15%]">
+              <button className="main-btn bg-[#ea462b]  w-[50%] md:w-[30%] lg:w-[15%]">
                 View Menu
               </button>
             </div>

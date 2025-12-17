@@ -72,7 +72,7 @@ function TestimonialsSection() {
   return (
     <section >
       <div className="max-w-6xl mx-auto px-5">
-              <h1 className="text-5xl text-(--text-color) font-semibold text-center mb-2">Our Reviews</h1>
+              <h1 className="text-3xl lg:text-5xl text-(--text-color) font-semibold text-center mb-2">Our Reviews</h1>
         <p className="p-text mb-10 text-center">They Say About Us
 </p>
         <div className="relative">
@@ -80,7 +80,7 @@ function TestimonialsSection() {
           <div ref={sliderRef} dir="ltr" className="keen-slider">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="keen-slider__slide">
-                <div className="bg-white rounded-xl p-8 shadow-md text-center h-full transform transition-all duration-300 border border-light">
+                <div className="bg-white rounded-xl p-4 md:p-8 shadow-md text-center h-full transform transition-all duration-300 border border-light">
                   
                   {/* IMAGE */}
                   <LazyLoadImage
@@ -117,7 +117,7 @@ function TestimonialsSection() {
           {/* PREV BUTTON */}
           <button
             onClick={() => instanceRef.current?.prev()}
-            className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/30 text-white rounded-full w-10 h-10 flex items-center justify-center z-10"
+            className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/30 text-white rounded-full w-6 h-6 md:w-10 md:h-10 flex items-center justify-center z-10"
           >
             <ChevronLeft className="w-4 h-4" fill="white" />
           </button>
@@ -125,7 +125,7 @@ function TestimonialsSection() {
           {/* NEXT BUTTON */}
           <button
             onClick={() => instanceRef.current?.next()}
-            className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/30 text-white rounded-full w-10 h-10 flex items-center justify-center z-10"
+            className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/30 text-white rounded-full w-6 h-6 md:w-10 md:h-10 flex items-center justify-center z-10"
           >
             <ChevronRight className="w-4 h-4" fill="white" />
           </button>

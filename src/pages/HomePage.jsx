@@ -13,7 +13,7 @@ function HomePage() {
 
  
   return (
-     <div className="homepage w-full flex flex-col gap-32 relative">
+     <div className="homepage w-full flex flex-col gap-32 relative overflow-x-hidden">
       
       <a
             href="#"

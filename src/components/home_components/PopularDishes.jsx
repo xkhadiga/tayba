@@ -86,19 +86,19 @@ const gallery = [
 
   return (
     <div className="w-full  text-center flex flex-col gap-2">
-        <h1 className="text-5xl font-semibold">Popular Dishes</h1>
+        <h1 className="text-3xl lg:text-5xl font-semibold">Popular Dishes</h1>
         <p className="p-text">Try the delicious new dishes from our chefs.
 </p>
               <div ref={sliderRef}
               dir="ltr"
               
-              className="keen-slider my-6 flex px-16 ">
+              className="keen-slider my-6 flex px-6 md:px-16 gap-4 md:gap-2">
         {products.map((product) => (
           <div key={product.id} className="keen-slider__slide flex flex-col items-center border border-light hover:cursor-pointer rounded-2xl p-3 gap-1 ">
             <LazyLoadImage src={product.img} alt={product.title} effect="blur" className="rounded-2xl" />
-            <h3 className="text-2xl">{product.title}</h3>
+            <h3 className="text-xl md:text-2xl font-semibold md:font-base">{product.title}</h3>
             <p className="p-text">{product.description}</p>
-            <p className="text-2xl text-[#ea462b]"> ${product.price}</p>
+            <p className="text-xl md:text-2xl text-[#ea462b]"> ${product.price}</p>
             <button className="main-btn bg-[#ea462b] w-[80%] mb-6">Add to Cart</button>
           </div>
         ))}
@@ -106,10 +106,10 @@ const gallery = [
     
     </div>
          {/* Gallery */}
-         <div className="flex w-full mt-20 mb-10 overflow-hidden">
+         <div className="grid grid-cols-2 md:flex w-full mt-20 mb-10 overflow-hidden gap-2 p-2">
         {gallery.map((product) => (
-          <div key={product.id} className="keen-slider__slide hover:scale-105 hover:cursor-pointer  ">
-            <LazyLoadImage effect="blur" src={product.img} alt={product.title}  />
+          <div key={product.id} className="keen-slider__slide hover:scale-102 hover:cursor-pointer  ">
+            <LazyLoadImage effect="blur" src={product.img} alt={product.title} className="rounded-xl"  />
           </div>
         ))}
          </div>

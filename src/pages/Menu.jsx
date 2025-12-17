@@ -169,21 +169,22 @@ const mainMenuData = [
   return (
     <div className='overflow-x-hidden w-full max-w-full flex flex-col items-center '>
       <PageBanner title="Our Menu" text="good food fresh ingredients" />
-      <section className="w-full max-w-7xl mt-20 py-16 bg-white border border-(--secondary-color) p-10 rounded-2xl">
+
+      <section className="w-full max-w-7xl mt-20 py-16 bg-white border border-(--secondary-color) md:p-10 rounded-2xl">
       {mainMenuData.map((menu, i) => (
         <div key={i} className="mb-40">
           {/* Title */}
           <div className="text-center mb-10 relative">
-            <LazyLoadImage effect='blur' src={menu.cover} alt='cove photo'/>
-            <h2 className="text-6xl font-bold tracking-wide text-(--text-color) absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">{menu.category}</h2>
+            <LazyLoadImage effect='blur' src={menu.cover} alt='cove photo' className='object-cover w-fit'/>
+            <h2 className="text-3xl md:text-6xl font-bold tracking-wide text-(--text-color) absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">{menu.category}</h2>
           </div>
 
           {/* Items  */}
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2  gap-10 px-6 ">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 px-6 ">
             {menu.items.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-5 border-b border-(--secondary-color) pb-6 mx-16"
+                className="flex flex-col md:flex-row items-start md:gap-5 border-b border-(--secondary-color) pb-6 lg:mx-16"
               >
                 <div className=" overflow-hidden ">
                   <LazyLoadImage 
@@ -196,11 +197,11 @@ const mainMenuData = [
 
                 <div className="flex-1">
                   <div className="flex justify-between items-center">
-                    <h4 className="text-xl font-semibold text-(--text-color)">{item.title}</h4>
-                    <span className="text-(--primary-color) font-semibold text-xl">{item.price}</span>
+                    <h4 className="md:text-lg lg:text-xl font-semibold text-(--text-color)">{item.title}</h4>
+                    <span className="text-(--primary-color) font-semibold text-lg md:text-xl">{item.price}</span>
                   </div>
 
-                  <p className="p-text  mt-1 text-lg">{item.desc}</p>
+                  <p className="p-text  mt-1 text-sm lg:text-lg">{item.desc}</p>
                 </div>
               </div>
             ))}

@@ -140,13 +140,13 @@ function MenuSection() {
 
   return (
     <div className="w-full flex flex-col  ">
-              <h1 className="text-5xl font-semibold text-center mb-2">Our Menu</h1>
+              <h1 className="text-3xl lg:text-5xl font-semibold text-center mb-2">Our Menu</h1>
         <p className="p-text mb-10 text-center">Try the delicious new dishes from our chefs.
 </p>
       {menuData.map((category, index) => (
         <section
-          className={`flex  mb-12 w-full items-center gap-32 justify-center ${
-            index % 2 !== 0 ? "flex-row-reverse" : ""
+          className={`flex flex-col md:flex-row px-2 mb-12 w-full items-center gap-6 lg:gap-32 justify-center ${
+            index % 2 !== 0 ? "flex-col md:flex-row-reverse " : ""
           }`}
           style={
            {backgroundImage: `url(${category.categoryBanner})`}
@@ -164,12 +164,12 @@ function MenuSection() {
           </div>
 
           {/* Right side: title + items */}
-          <div >
-            <h2 className="text-3xl font-bold mb-4">{category.category}</h2>
+          <div className="flex flex-col">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-center md:text-start">{category.category}</h2>
 
-            <ul className="space-y-4 flex flex-col ">
+            <ul className="space-y-1 md:space-y-4 flex flex-col ">
               {category.items.map((item) => (
-                <li key={item.id} className="flex gap-4 items-center ">
+                <li key={item.id} className="flex gap-1 md:gap-4 items-center ">
                   {/* Small item image */}
                   <div className="w-18 h-18 flex-shrink-0">
                     <LazyLoadImage
@@ -183,14 +183,14 @@ function MenuSection() {
                   {/* Item info */}
                   <div>
                     <h4 className="flex justify-between font-semibold">
-                      <span className="font-semibold text-lg w-[60vh]">
+                      <span className="font-semibold md:text-lg md:w-[60vh]">
                         {item.title}
                       </span>
-                      <span className="text-[#ea462b] font-semibold text-lg">
+                      <span className="text-[#ea462b] font-semibold md:text-lg">
                         ${item.price.toFixed(2)}
                       </span>
                     </h4>
-                    <p className="p-text">{item.description}</p>
+                    <p className="p-text text-sm md:text-base">{item.description}</p>
                   </div>
                 </li>
               ))}
