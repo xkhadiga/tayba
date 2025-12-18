@@ -6,6 +6,7 @@
     "contact": "Contact",
     "book": "Book a Table"
   },
+
   "carousel": {
     "slide1": {
       "h1": "Fresh & Fast",
@@ -23,5 +24,164 @@
       "p": "You will love it"
     },
     "button": "View Menu"
+  },
+
+  "about": {
+    "stats": {
+      "tastyDishes": "Tasty Dishes",
+      "happyCustomers": "Happy Customers",
+      "yearsExperience": "Years of Experience",
+      "amazingChefs": "Amazing Chefs"
+    },
+    "features": {
+      "freshIngredients": "Fresh Ingredients",
+      "bestQuality": "Best Quality",
+      "happyClients": "Happy Clients",
+      "veganMenu": "Vegan Menu",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    },
+    "hero": {
+      "title": "All in Good Taste Food With",
+      "subtitle": "Try the delicious new dishes from our chef",
+      "paragraph1": "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.",
+      "paragraph2": "Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna."
+    }
+  },
+  "popular": {
+    "header": {
+      "title": "Popular Dishes",
+      "subtitle": "Try the delicious new dishes from our chef"
+    },
+    "card": {
+      "title": {
+        "burger": "Cheese Royale Burger",
+        "bowTiePasta": "Bow Tie Pasta with Chicken Balls",
+        "royale": "Grilled Beef Patty",
+        "fettuccineCheese": "Fettuccine with Cheese & Tomato",
+        "meatMushroomPizza": "Meat & Mushroom Pizza"
+      },
+      "description": {
+        "burger": "Grilled beef topped with rich cheese and savory touches for a truly royal burger experience.",
+        "bowTiePasta": "Al dente bow-tie pasta served with tender chicken balls in a creamy, flavorful sauce.",
+        "royale": "Juicy grilled beef patty seasoned with special spices, cooked to perfection and served fresh for a rich, smoky flavor.",
+        "fettuccineCheese": "Fettuccine pasta smothered with shredded cheese and garnished with fresh tomato slices.",
+        "meatMushroomPizza": "A hearty pizza loaded with mixed meats, mushrooms, and gooey melted cheese."
+      }
+    }
+  },
+  "menu": {
+    "header": {
+      "title": "Our Menu",
+      "subtitle": "Try the delicious new dishes from our chef"
+    },
+    "pizza": {
+      "title": "Pizza",
+      "oakeySmokey": {
+        "title": "Oakey Smokey Pizza",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "whiteRicotta": {
+        "title": "White Ricotta Pizza",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "margherita": {
+        "title": "Original Margherita Pizza",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "calzone": {
+        "title": "Calzone",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "mercyMargherita": {
+        "title": "Mercy Margherita",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      }
+    },
+
+    "pasta": {
+      "title": "Pasta",
+      "amatriciana": {
+        "title": "Spaghetti all’Amatriciana",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "carbonara": {
+        "title": "Spaghetti Carbonara",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "lasagna": {
+        "title": "Lasagna",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      }
+    },
+
+    "burger": {
+      "title": "Burger",
+      "doubleBarrel": {
+        "title": "The Double Barrel Meat Feast",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "classicHavana": {
+        "title": "Classic Havana Burger",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "bbqChicken": {
+        "title": "Single BBQ Chicken Burger",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      },
+      "havanaCombo": {
+        "title": "Havana Special Burger Combo",
+        "desc": "Smoked mozzarella, basil and pecorino romano"
+      }
+    }
+  },
+  "bestDish": {
+    "title": "Best Dish of the Day",
+    "items": {
+      "bigCalzone": "Big Calzone",
+      "napoletanoPizza": "Napoletano Pizza"
+    }
+  },
+  "testimonials": {
+    "header": {
+      "title": "Our Reviews",
+      "subtitle": "They Say About Us"
+    },
+    "sarah": {
+      "name": "Sarah Johnson",
+      "role": "Food Blogger",
+      "message": "The flavors here are incredible! Every dish tells a story of passion and quality. Highly recommend!"
+    },
+    "mike": {
+      "name": "Mike Chen",
+      "role": "Regular Customer",
+      "message": "Best dining experience I've had in years. The staff is friendly and the atmosphere is perfect."
+    },
+    "emma": {
+      "name": "Emma Davis",
+      "role": "Chef",
+      "message": "As a fellow chef, I appreciate the attention to detail and fresh ingredients. Outstanding work!"
+    },
+    "david": {
+      "name": "David Wilson",
+      "role": "Family Man",
+      "message": "Great place to bring the whole family. Kids love it and adults enjoy the sophisticated menu."
+    }
+  },
+  "footer": {
+    "about": "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.",
+    "newsletter": {
+      "title": "Newsletter",
+      "desc": "Subscribe to our newsletter to get the latest updates and offers.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "contact": {
+      "title": "How To Find Us",
+      "address": "Alexandria, Egypt",
+      "phone": "+01 234 56789",
+      "email": "khadiga.alaa0@gmail.com"
+    },
+    "copyright": "© 2025 Khadija Alaa El-Din. All rights reserved.",
+    "backToTop": "Back To Top"
   }
 }

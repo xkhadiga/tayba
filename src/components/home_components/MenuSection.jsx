@@ -27,121 +27,125 @@ import c3item3 from "../../assets/menuitems/ct3i3.jpg";
 import c3item4 from "../../assets/menuitems/ct3i4.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useTranslation } from "react-i18next";
 
 
 function MenuSection() {
-  const menuData = [
-    {
-      category: "Pizza",
-      categoryBanner: banner1,
-      categoryImg: category1,
-      items: [
-        {
-          id: 1,
-          img: c1item1,
-          title: "Oakey Smokey Pizza",
-          price: 21,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 2,
-          img: c1item2,
-          title: "White Ricotta Pizza",
-          price: 24,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 3,
-          img: c1item3,
-          title: "Original Margherita Pizza",
-          price: 22,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 4,
-          img: c1item4,
-          title: "Calzone",
-          price: 23,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 5,
-          img: c1item5,
-          title: "Mercy Margarita",
-          price: 18,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-      ],
-    },
-    {
-      category: "Pasta",
-      categoryBanner: banner2,
-      categoryImg: category2,
-      items: [
-        {
-          id: 1,
-          img: c2item1,
-          title: "Spaghetti all’Amatriciana",
-          price: 21,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 2,
-          img: c2item2,
-          title: "Spaghetti Carbonara",
-          price: 24,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 3,
-          img: c2item3,
-          title: "Lasagna",
-          price: 22,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-      ],
-    },
-    {
-      category: "Burger",
-      categoryBanner: banner3,
-      categoryImg: category3,
-      items: [
-        {
-          id: 1,
-          img: c3item1,
-          title: "The Double Barrel Meat Feast",
-          price: 21,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 2,
-          img: c3item2,
-          title: "Classic Havana Burger",
-          price: 24,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 3,
-          img: c3item3,
-          title: "Single BBQ Chicken Burger",
-          price: 22,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-        {
-          id: 4,
-          img: c3item4,
-          title: "Havana Speical Burger Combo",
-          price: 23,
-          description: "Smoke mozzarella, basil and picorino Romano",
-        },
-      ],
-    },
-  ];
+  const {t} = useTranslation();
+const menuData = [
+  {
+    category: "menu.pizza.title",
+    categoryBanner: banner1,
+    categoryImg: category1,
+    items: [
+      {
+        id: 1,
+        img: c1item1,
+        title: "menu.pizza.oakeySmokey.title",
+        description: "menu.pizza.oakeySmokey.desc",
+        price: 21,
+      },
+      {
+        id: 2,
+        img: c1item2,
+        title: "menu.pizza.whiteRicotta.title",
+        description: "menu.pizza.whiteRicotta.desc",
+        price: 24,
+      },
+      {
+        id: 3,
+        img: c1item3,
+        title: "menu.pizza.margherita.title",
+        description: "menu.pizza.margherita.desc",
+        price: 22,
+      },
+      {
+        id: 4,
+        img: c1item4,
+        title: "menu.pizza.calzone.title",
+        description: "menu.pizza.calzone.desc",
+        price: 23,
+      },
+      {
+        id: 5,
+        img: c1item5,
+        title: "menu.pizza.mercyMargherita.title",
+        description: "menu.pizza.mercyMargherita.desc",
+        price: 18,
+      },
+    ],
+  },
+
+  {
+    category: "menu.pasta.title",
+    categoryBanner: banner2,
+    categoryImg: category2,
+    items: [
+      {
+        id: 1,
+        img: c2item1,
+        title: "menu.pasta.amatriciana.title",
+        description: "menu.pasta.amatriciana.desc",
+        price: 21,
+      },
+      {
+        id: 2,
+        img: c2item2,
+        title: "menu.pasta.carbonara.title",
+        description: "menu.pasta.carbonara.desc",
+        price: 24,
+      },
+      {
+        id: 3,
+        img: c2item3,
+        title: "menu.pasta.lasagna.title",
+        description: "menu.pasta.lasagna.desc",
+        price: 22,
+      },
+    ],
+  },
+
+  {
+    category: "menu.burger.title",
+    categoryBanner: banner3,
+    categoryImg: category3,
+    items: [
+      {
+        id: 1,
+        img: c3item1,
+        title: "menu.burger.doubleBarrel.title",
+        description: "menu.burger.doubleBarrel.desc",
+        price: 21,
+      },
+      {
+        id: 2,
+        img: c3item2,
+        title: "menu.burger.classicHavana.title",
+        description: "menu.burger.classicHavana.desc",
+        price: 24,
+      },
+      {
+        id: 3,
+        img: c3item3,
+        title: "menu.burger.bbqChicken.title",
+        description: "menu.burger.bbqChicken.desc",
+        price: 22,
+      },
+      {
+        id: 4,
+        img: c3item4,
+        title: "menu.burger.havanaCombo.title",
+        description: "menu.burger.havanaCombo.desc",
+        price: 23,
+      },
+    ],
+  },
+];
 
   return (
     <div className="w-full flex flex-col  ">
-              <h1 className="text-3xl lg:text-5xl font-semibold text-center mb-2">Our Menu</h1>
-        <p className="p-text mb-10 text-center">Try the delicious new dishes from our chefs.
+              <h1 className="text-3xl lg:text-5xl font-semibold text-center mb-2">{t("menu.header.title")}</h1>
+        <p className="p-text mb-10 text-center">{t("menu.header.subtitle")}
 </p>
       {menuData.map((category, index) => (
         <section
@@ -165,7 +169,7 @@ function MenuSection() {
 
           {/* Right side: title + items */}
           <div className="flex flex-col">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-center md:text-start">{category.category}</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-center md:text-start">{t(category.category)}</h2>
 
             <ul className="space-y-1 md:space-y-4 flex flex-col ">
               {category.items.map((item) => (
@@ -184,13 +188,13 @@ function MenuSection() {
                   <div>
                     <h4 className="flex justify-between font-semibold">
                       <span className="font-semibold md:text-lg md:w-[60vh]">
-                        {item.title}
+                        {t(item.title)}
                       </span>
                       <span className="text-[#ea462b] font-semibold md:text-lg">
                         ${item.price.toFixed(2)}
                       </span>
                     </h4>
-                    <p className="p-text text-sm md:text-base">{item.description}</p>
+                    <p className="p-text text-sm md:text-base">{t(item.description)}</p>
                   </div>
                 </li>
               ))}

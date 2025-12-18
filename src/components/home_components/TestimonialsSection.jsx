@@ -4,43 +4,42 @@ import "keen-slider/keen-slider.css";
 import { ChevronLeft, ChevronRight } from "../../assets/icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useTranslation } from "react-i18next";
 
 
 function TestimonialsSection() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Food Blogger",
-      message:
-        "The flavors here are incredible! Every dish tells a story of passion and quality. Highly recommend!",
-      image: "https://randomuser.me/api/portraits/women/45.jpg",
-      rating: 5,
-    },
-    {
-      name: "Mike Chen",
-      role: "Regular Customer",
-      message:
-        "Best dining experience I've had in years. The staff is friendly and the atmosphere is perfect.",
-      image: "https://randomuser.me/api/portraits/men/78.jpg",
-      rating: 5,
-    },
-    {
-      name: "Emma Davis",
-      role: "Chef",
-      message:
-        "As a fellow chef, I appreciate the attention to detail and fresh ingredients. Outstanding work!",
-      image: "https://randomuser.me/api/portraits/women/67.jpg",
-      rating: 5,
-    },
-    {
-      name: "David Wilson",
-      role: "Family Man",
-      message:
-        "Great place to bring the whole family. Kids love it and adults enjoy the sophisticated menu.",
-      image: "https://randomuser.me/api/portraits/men/12.jpg",
-      rating: 4,
-    },
-  ];
+  const {t} = useTranslation();
+const testimonials = [
+  {
+    name: "testimonials.sarah.name",
+    role: "testimonials.sarah.role",
+    message: "testimonials.sarah.message",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+    rating: 5,
+  },
+  {
+    name: "testimonials.mike.name",
+    role: "testimonials.mike.role",
+    message: "testimonials.mike.message",
+    image: "https://randomuser.me/api/portraits/men/78.jpg",
+    rating: 5,
+  },
+  {
+    name: "testimonials.emma.name",
+    role: "testimonials.emma.role",
+    message: "testimonials.emma.message",
+    image: "https://randomuser.me/api/portraits/women/67.jpg",
+    rating: 5,
+  },
+  {
+    name: "testimonials.david.name",
+    role: "testimonials.david.role",
+    message: "testimonials.david.message",
+    image: "https://randomuser.me/api/portraits/men/12.jpg",
+    rating: 4,
+  },
+];
+
 
   const renderStars = (rating) =>
     Array.from({ length: 5 }).map((_, i) => (
@@ -72,8 +71,8 @@ function TestimonialsSection() {
   return (
     <section >
       <div className="max-w-6xl mx-auto px-5">
-              <h1 className="text-3xl lg:text-5xl text-(--text-color) font-semibold text-center mb-2">Our Reviews</h1>
-        <p className="p-text mb-10 text-center">They Say About Us
+              <h1 className="text-3xl lg:text-5xl text-(--text-color) font-semibold text-center mb-2">{t("testimonials.header.title")}</h1>
+        <p className="p-text mb-10 text-center">{t("testimonials.header.subtitle")}
 </p>
         <div className="relative">
           {/* SLIDER */}
@@ -97,17 +96,17 @@ function TestimonialsSection() {
 
                   {/* MESSAGE */}
                   <p className="p-text text-base italic mb-5">
-                    "{testimonial.message}"
+                    "{t(testimonial.message)}"
                   </p>
 
                   {/* NAME */}
                   <h4 className="text-lg font-bold text-gray-800">
-                    {testimonial.name}
+                    {t(testimonial.name)}
                   </h4>
 
                   {/* ROLE */}
                   <span className="text-sm p-text font-medium">
-                    {testimonial.role}
+                    {t(testimonial.role)}
                   </span>
                 </div>
               </div>
