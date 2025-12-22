@@ -10,54 +10,50 @@ import PageBanner from "../components/common/PageBanner";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-import { FaFacebookF, FaTwitter, FaInstagram,  } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import TestimonialsSection from "../components/home_components/TestimonialsSection";
+import { useTranslation } from "react-i18next";
 
 function About() {
-  const [title, setTitle] = useState("About Us");
-  const [text, setText] = useState("get to know more about Tayba");
+  const { t } = useTranslation();
+
   const aboutData = [
     {
-      title: "Our History",
-      subtitle: "Discover Our Story",
+      title: t("about-page.about.history.title"),
+      subtitle: t("about-page.about.history.subtitle"),
       img: AboutImg,
-      paragraphs: [
-        "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.",
-        "Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-      ],
+      paragraphs: [t("about-page.about.history.p1"), t("about-page.about.history.p2")],
     },
     {
-      title: "Who We Are",
-      subtitle: "Welcome to Tayba",
+      title: t("about-page.about.who.title"),
+      subtitle: t("about-page.about.who.subtitle"),
       img: AboutImg2,
-      paragraphs: [
-        "Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-        "Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.",
-      ],
+      paragraphs: [t("about-page.about.who.p1"), t("about-page.about.who.p2")],
     },
   ];
-  const aboutUsData = [
-    {
-      number: "60+",
-      title: "Tasty Dishes",
-    },
-    {
-      number: "25k",
-      title: "Happy Customers",
-    },
-    {
-      number: "10+",
-      title: "Years of Experience",
-    },
-    {
-      number: "12",
-      title: "Amazing Chefs",
-    },
-    {
-      number: "300+",
-      title: "Best Recipes",
-    },
-  ];
+
+const aboutUsData = [
+  {
+    number: "60+",
+    title: t("about-page.aboutUsStats.dishes"),
+  },
+  {
+    number: "25k",
+    title: t("about-page.aboutUsStats.customers"),
+  },
+  {
+    number: "10+",
+    title: t("about-page.aboutUsStats.experience"),
+  },
+  {
+    number: "12",
+    title: t("about-page.aboutUsStats.chefs"),
+  },
+  {
+    number: "300+",
+    title: t("about-page.aboutUsStats.recipes"),
+  },
+];
   const chefsData = [
     {
       name: "John Doe",
@@ -77,7 +73,7 @@ function About() {
   ];
   return (
     <div>
-      <PageBanner title={title} text={text} />
+      <PageBanner title={t("about-page.title")} text={t("about-page.text")} />
       {/* ABOUT US */}
       <div className="mt-20 md:mt-32 lg:mt-64 ">
         {aboutData.map((item, index) => (
@@ -97,10 +93,14 @@ function About() {
               </h2>
               <h3 className="p-text text-sm md:text-lg"> {item.subtitle}</h3>
               {item.paragraphs.map((paragraph, paragraphIndex) => (
-                <p className="p-text my-6 text-sm md:text-lg" key={paragraphIndex}>
+                <p
+                  className="p-text my-6 text-sm md:text-lg"
+                  key={paragraphIndex}
+                >
                   {paragraph}
                 </p>
               ))}
+
               {index % 2 === 0 ? (
                 <div className="flex items-center justify-center gap-4">
                   <LazyLoadImage src={ChefImg} />
@@ -130,10 +130,13 @@ function About() {
       </section>
       {/* Chefs */}
       <section className="text-center mb-32 lg:mb-64 ">
-              <h1 className="text-3xl lg:text-5xl font-semibold text-(--text-color) mb-2">Meet Our Chefs</h1>
-          <p className="text-lg p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <h1 className="text-3xl lg:text-5xl font-semibold text-(--text-color) mb-2">
+          {t("about-page.chefs.title")}
+        </h1>
+        <p className="text-lg p-text">
+          {t("about-page.chefs.text")}
+        </p>
         <div className="flex flex-col md:flex-row mt-16 gap-8 lg:gap-16 items-center justify-center text-center px-2">
-    
           {chefsData.map((item, index) => {
             return (
               <div key={index} className="flex flex-col  ">
@@ -143,11 +146,23 @@ function About() {
                 </h1>
                 <p className="p-text text-sm md:text-lg">{item.role}</p>
                 <div className="border-t border-[#dadada] mt-2 md:mt-6">
-                           <ul className="flex items-center justify-center gap-2 md:gap-4 p-3 text-sm md:text-lg p-text">
-                                <li><a href="#" ><FaFacebookF /></a></li>
-                                <li><a href="#" ><FaTwitter /></a></li>
-                                <li><a href="#" ><FaInstagram /></a></li>
-                              </ul>
+                  <ul className="flex items-center justify-center gap-2 md:gap-4 p-3 text-sm md:text-lg p-text">
+                    <li>
+                      <a href="#">
+                        <FaFacebookF />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <FaInstagram />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             );

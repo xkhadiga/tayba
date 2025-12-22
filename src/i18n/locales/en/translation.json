@@ -4,6 +4,7 @@
     "about": "About",
     "menu": "Menu",
     "contact": "Contact",
+    "language":"Language",
     "book": "Book a Table"
   },
 
@@ -183,5 +184,136 @@
     },
     "copyright": "© 2025 Khadija Alaa El-Din. All rights reserved.",
     "backToTop": "Back To Top"
+  },
+  "about-page": {
+    "title": "About Us",
+    "text": "Get to know more about Tayba",
+    "about": {
+      "history": {
+        "title": "Our History",
+        "subtitle": "Discover Our Story",
+        "p1": "Tayba’s journey began with a genuine passion for delivering a unique dining experience that combines high quality with authentic flavors. From the very beginning, our goal has been to craft dishes with care, using carefully selected ingredients to meet and exceed our customers’ expectations.",
+        "p2": "Over the years, we have remained committed to continuous growth and innovation, refining our recipes while staying true to our core values of quality, cleanliness, and attention to detail to ensure a memorable experience with every visit."
+      },
+      "who": {
+        "title": "Who We Are",
+        "subtitle": "Welcome to Tayba",
+        "p1": "Tayba is a brand dedicated to offering a complete dining experience, built on the belief that food is more than just a meal—it is a moment to be enjoyed through great taste, attentive service, and a welcoming atmosphere.",
+        "p2": "We strive to be our customers’ first choice by upholding the highest quality standards, providing a diverse menu that appeals to all tastes, and building long-lasting relationships based on trust and satisfaction."
+      }
+    },
+    "aboutUsStats": {
+      "dishes": "Tasty Dishes",
+      "customers": "Happy Customers",
+      "experience": "Years of Experience",
+      "chefs": "Amazing Chefs",
+      "recipes": "Best Recipes"
+    },
+    "chefs": {
+      "title": "Meet Our Chefs",
+      "text": "Passionate chefs crafting flavorful dishes with skill, creativity, and love"
+    }
+  },
+  "menu-page": {
+    "title": "Our Menu",
+    "text": "Fresh flavors, crafted with care",
+    "categories": {
+      "pizza": "Pizza",
+      "pasta": "Pasta",
+      "burgers": "Burgers",
+      "desserts": "Desserts"
+    },
+    "items": {
+      "smokeyBBQChickenPizza": {
+        "title": "Smokey BBQ Chicken Pizza",
+        "desc": "Tender BBQ chicken, smoked mozzarella, red onions, and fresh basil."
+      },
+      "fourCheeseRicottaPizza": {
+        "title": "Four Cheese Ricotta Pizza",
+        "desc": "Ricotta, mozzarella, parmesan, and provolone on a crispy base."
+      },
+      "classicMargherita": {
+        "title": "Classic Margherita",
+        "desc": "Fresh tomatoes, buffalo mozzarella, basil, and olive oil drizzle."
+      },
+      "pepperoniLoversPizza": {
+        "title": "Pepperoni Lovers Pizza",
+        "desc": "Loaded with premium pepperoni, mozzarella, and our signature sauce."
+      },
+      "veggieGardenDelight": {
+        "title": "Veggie Garden Delight",
+        "desc": "Bell peppers, mushrooms, olives, red onions, and basil pesto."
+      },
+
+      "spaghettiBolognese": {
+        "title": "Spaghetti Bolognese",
+        "desc": "Slow-cooked beef ragù with parmesan and fresh herbs."
+      },
+      "chickenAlfredo": {
+        "title": "Creamy Chicken Alfredo",
+        "desc": "Grilled chicken with creamy Alfredo sauce and fettuccine pasta."
+      },
+      "penneArrabbiata": {
+        "title": "Penne Arrabbiata",
+        "desc": "Penne tossed in a spicy tomato-garlic sauce with chili flakes."
+      },
+
+      "doubleBeefBurger": {
+        "title": "Double Beef Smash Burger",
+        "desc": "Two smashed beef patties with cheddar, pickles, and house sauce."
+      },
+      "crispyChickenBurger": {
+        "title": "Crispy Chicken Burger",
+        "desc": "Crispy chicken fillet, lettuce, mayo, and brioche bun."
+      },
+      "bbqBaconBurger": {
+        "title": "BBQ Bacon Burger",
+        "desc": "Grilled beef, smoky BBQ sauce, crispy bacon, and cheddar."
+      },
+      "spicyJalapenoBurger": {
+        "title": "Spicy Jalapeño Burger",
+        "desc": "Jalapeños, spicy sauce, melted cheese, and caramelized onions."
+      },
+
+      "lavaCake": {
+        "title": "Chocolate Lava Cake",
+        "desc": "Warm molten chocolate cake served with vanilla ice cream."
+      },
+      "cheesecake": {
+        "title": "New York Cheesecake",
+        "desc": "Classic creamy cheesecake topped with fresh berry sauce."
+      },
+      "tiramisu": {
+        "title": "Tiramisu",
+        "desc": "Layers of espresso-soaked ladyfingers with mascarpone cream."
+      }
+    }
+  },
+  "contact-page": {
+    "title": "Contact",
+    "text": "get in touch with us",
+    "location": {
+      "title": "Location:",
+      "text": "123 Alexandria, Egypt"
+    },
+    "phone": {
+      "title": "Phone:",
+      "text": "+012 345 67890"
+    },
+    "email": {
+      "title": "Email:",
+      "text": "tayba@example.co"
+    },
+    "button":"Submit"
+  },
+  "booking-page":{
+    "title": "Book a Table",
+    "subtitle": "Book your Table Now",
+    "text":"Book your table and let us take care of the rest.",
+    "paragraph": 
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedolorm reminusto doeiusmod tempor condorico consectetur adipiscing elitut aliquip.",
+    "button": "Confirm Reservation"
+
   }
+
 }

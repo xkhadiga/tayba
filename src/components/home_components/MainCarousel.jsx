@@ -79,7 +79,7 @@ function MainCarousel() {
               <p className="text-xl md:text-2xl my-6 md:my-3 font-medium md:font-base text-shadow-gray-700 text-shadow-sm md:text-shadow-none " >{item.p}</p>
 
               <button className="main-btn bg-[#ea462b]  w-[50%] md:w-[30%] lg:w-[15%]">
-                View Menu
+                {t("carousel.button")}
               </button>
             </div>
           </div>

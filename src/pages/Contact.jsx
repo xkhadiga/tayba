@@ -1,38 +1,39 @@
 import React from 'react'
 import PageBanner from '../components/common/PageBanner'
 import { LocationIcon, PhoneIcon, EmailIcon } from '../assets/icons'
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
-  const contanctData = [
-    {
-      icon: <LocationIcon /> ,
-      title: "Location:",
-      text: "123 Street, New York, USA"
-    },
-    {
-      icon: <PhoneIcon /> ,
-      title: "Phone:",
-      text: "+012 345 67890"
-    },
-    {
-      icon: <EmailIcon /> ,
-      title: "Email:",
-      text: "BbWlR@example.com"
-    }
-  ]
+  const {t} = useTranslation();
+const contactData = [
+  {
+    icon: <LocationIcon />,
+    titleKey: "contact-page.location.title",
+    textKey: "contact-page.location.text",
+  },
+  {
+    icon: <PhoneIcon />,
+    titleKey: "contact-page.phone.title",
+    textKey: "contact-page.phone.text",
+  },
+  {
+    icon: <EmailIcon />,
+    titleKey: "contact-page.email.title",
+    textKey: "contact-page.email.text",
+  }
+];
   return (
     <div className='overflow-x-hidden flex flex-col items-center w-full'>
-      <PageBanner title="Contact" text="get in touch
-        with us" />
+      <PageBanner title={t("contact-page.title")} text={t("contact-page.text")}  />
 
         {/* top section - contacts */}
         <section className='grid grid-cols-1 md:grid-cols-2 lg:flex w-full items-center justify-around my-10 lg:m-0'>
-          {contanctData.map((item, index) => (
+          {contactData.map((item, index) => (
             <div className="flex items-center gap-4 p-4 md:p-10 lg:p-20" key={index}>
               <div className="w-12 h-12 flex items-center justify-center border border-(--primary-color) text-(--primary-color) rounded-full p-3 hover:bg-(--primary-color) hover:text-white">{item.icon} </div>
               <div>
-                <h3 className="text-xl lg:text-3xl text-(--text-color) font-semibold">{item.title}</h3>
-                <p className='p-text text-sm lg:text-lg'>{item.text}</p>
+                <h3 className="text-xl lg:text-3xl text-(--text-color) font-semibold">{t(item.titleKey)}</h3>
+                <p className='p-text text-sm lg:text-lg'>{t(item.textKey)}</p>
               </div>
             </div>
           ))}
@@ -45,7 +46,9 @@ function Contact() {
             <input type="email" placeholder='Email' className='p-2 pl-4 border border-(--secondary-color)' />
             <input type="number" placeholder='Your Phone' className='p-2 pl-4 border border-(--secondary-color)' />
             <textarea type="text" placeholder='Your Message' className='p-2 pl-4 border border-(--secondary-color)' />
-            <button className="main-btn bg-[#ea462b] w-[40%] lg:w-[30%] mb-6">Submit</button>
+            <button className="main-btn bg-[#ea462b] w-[40%] lg:w-[30%] mb-6">
+              {t("contact-page.button")}
+            </button>
             
           </div>
           {/* map - address */}

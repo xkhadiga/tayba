@@ -1,21 +1,20 @@
 import React from "react";
 import PageBanner from "../components/common/PageBanner";
+import { useTranslation } from "react-i18next";
 
 function Booking() {
+  const { t} = useTranslation();
   return (
     <div className="overflow-x-hidden flex flex-col items-center w-full">
       <PageBanner
-        title="Book A Table
-"
-        text="Book your table and let us take care of the rest."
+        title={t("booking-page.title")}
+        text={t("booking-page.text")}
       />
 
       <div className="text-center mt-10 p-4 md:p-10 lg:p-20 w-full flex flex-col items-center">
-        <h1 className="text-3xl lg:text-5xl text-(--text-color)">Book a Table</h1>
+        <h1 className="text-3xl lg:text-5xl text-(--text-color)">{t("booking-page.subtitle")}</h1>
         <p className="text-sm md:text-lg p-text lg:w-3xl mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedolorm
-          reminusto doeiusmod tempor condorico consectetur adipiscing elitut
-          aliquip.
+          {t("booking-page.paragraph")}
         </p>
 
         <div className="grid grid-cols-2 grid-rows-3 gap-4 w-full mt-20">
@@ -43,7 +42,7 @@ function Booking() {
           ></textarea>
 
           <button className="main-btn bg-[#ea462b] w-[60%] lg:w-[30%] mb-6 col-span-2 mx-auto">
-            Confirm Reservation
+            {t("booking-page.button")}
           </button>
         </div>
       </div>
